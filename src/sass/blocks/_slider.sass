@@ -1,0 +1,62 @@
+.slider
+    min-height: 700px
+    padding-top: 108px
+    &__item
+        position: relative
+        max-width: 727px
+        min-height: 500px
+        img
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+    &__arrow
+        height: 50px
+        width: 30px
+        cursor: pointer
+    &__wrapper
+        display: block
+        margin: 0 auto
+        max-width: 700px
+        position: relative
+
+.slick-arrow
+    border: none
+    background-color: #FFF
+
+.slick-dots
+    margin: 0 auto
+    width: 70px
+    height: 40px
+    list-style: none
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    display: flex
+    justify-content: space-between
+    margin-block: 0 0 0 0
+    padding-inline: 0 0 0 0
+    margin-top: 30px
+    .slick-active
+        opacity: 0.4
+    li
+        display: inline-block
+        height: 12px
+        button
+            display: block
+            margin: 0 auto
+            width: 10px
+            height: 12px
+            background-color: $main-color 
+            border: none
+            border-radius: 50%
+            font-size: 0px
+.next
+    position: absolute
+    right: -66px
+    top: 50%
+    transform: translateY(-50%)
+.prev
+    position: absolute
+    left: -66px
+    top: 50%
+    transform: translateY(-50%)

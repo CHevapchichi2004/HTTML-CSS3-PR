@@ -1,0 +1,401 @@
+@import base/_vars
+@import blocks/_fonts
+
+
+* 
+    box-sizing: border-box
+    font-family: Museo Sans Cyrl
+
+body
+    margin: 0
+
+.container
+    max-width: 950px
+    margin: 0 auto
+
+.catalogue
+    min-height: 903px
+    transition: 0.5s all
+    margin-bottom: 79px
+    &__header
+        text-align: center
+        color: #0D0D0D
+        text-align: center
+        font-size: 30px
+        font-weight: 500
+        line-height: 150% 
+        text-transform: uppercase
+    &__filters
+        list-style: none
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-top: 46px
+        padding-inline: 0 0 0 0
+    &__filter
+        width: 223px
+        height: 52px 
+        line-height: 48px
+        transform: skewX(-25deg)
+        border: 2px solid #d0d0d0
+        text-transform: uppercase
+        text-align: center
+        margin: 0 5px
+        color: #6B6B6B
+        transition: all 0.5s
+        cursor: pointer
+        &_active
+            transition: 0.5s
+            background: $main-color
+            border: none
+            color: #ffffff
+        span
+            display: inline-block
+            transform: skewX(25deg)
+            text-align: center
+            font-size: 18px
+            font-weight: 300
+            line-height: 100%
+            text-transform: uppercase
+        &:hover
+            box-shadow: 2px 2px 20px $main-color
+            border: none
+    &__content
+        transition: 0.5s
+        margin-top: 57px
+        display: none
+        flex-wrap: wrap
+        &_active
+            display: flex
+        
+            
+    
+.catalogue-item
+    margin-right: 20px
+    width: 303px
+    min-height: 442px
+    border: 2px solid #E8E8E8
+    padding: 20px 26px 21px 26px
+    overflow: hidden
+    margin-bottom: 20px
+    &:nth-child(3n+3)
+         
+        margin-right: 0
+    &__img
+        display: block
+        margin: 0 auto
+        margin-top: 15px
+        height: 200px
+        max-width: 100% 
+    &__subtitle
+        text-align: center
+        margin-top: 15px
+        color: #0D0D0D
+        font-size: 16px
+        font-weight: 700
+        line-height: normal
+    &__descr
+        text-align: center
+        margin-top: 15px
+        color: #0D0D0D
+        font-size: 14px
+        font-weight: 300
+    &__link
+        display: block
+        text-align: center
+        color: $main-color
+        margin-top: 10px 
+        font-size: 14px
+        font-weight: 500
+        line-height: 14px
+        text-decoration-line: underline
+    hr
+        margin-top: 17px
+        margin-bottom: 20px
+        background: #E8E8E8
+        border-bottom: none 
+    &__footer
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__prices
+        margin-top: 7px
+    &__old-price
+        color: #555
+        font-size: 14px
+        font-weight: 300
+        line-height: 100% 
+        text-decoration-line: line-through
+    &__price
+        margin-top: 2px
+        color: #050505
+        font-size: 20px
+        font-weight: 700
+        line-height: 100%
+    &__wrapper
+        display: flex
+        width: calc( 200% + 40px  )
+    &__content
+        width: 50%
+        margin-right: 0px
+        transform: translateX(-100%)
+        transition: 0.5s all
+        &_active
+            transform: translateX(0%)
+            margin-right: 20px
+    &__dope
+        position: relative
+        width: 50%
+        margin-left: 20px
+        transform: translateX(0%)
+        transition: 0.5s all
+        padding-right: 20px
+        list-style-type: none
+        padding-inline-start: 0
+        margin-block-start: 0
+        margin-block-end: 0
+        li  
+            position: relative
+            color: #555
+            font-size: 14px
+            font-style: normal
+            font-weight: 300
+            line-height: 150%
+            margin-bottom: 20px
+            padding-left: 16px
+            &::before
+                content: ''
+                position: absolute
+                left: 0px
+                top: 6.5px
+                display: inline-block
+                margin-right: 9px
+                width: 7px
+                height: 7px
+                background: $main-color
+        &_active
+            margin-left: 0px
+            transform: translateX(-100%)
+    &__back
+        position: absolute
+        bottom: 0px
+        left: 50%
+        transform: translateX(calc( -50% - 10px ))
+        display: block
+        text-align: center
+        color: $main-color
+        margin-top: 10px 
+        font-size: 14px
+        font-weight: 500
+        line-height: 14px
+        text-decoration-line: underline
+.footer
+    position: relative
+    height: 630px
+    position: relative
+    margin-top: 35px
+    &__info
+        position: absolute
+        top: 0px
+        left: 50%
+        transform: translateX(-50%)
+        width: 460px
+        height: 270px
+        background: $main-color
+        padding: 50px 53px 53px 56px
+        address
+            color: #FFF
+            text-align: center
+            font-size: 20px
+            font-style: normal
+            font-weight: 500
+            line-height: 20px
+            margin-bottom: 36px
+    &__phone
+        display: block
+        text-align: center
+        color: #FFF
+        text-align: center
+        font-size: 20px
+        font-style: normal
+        font-weight: 700
+        line-height: 20px
+        text-decoration: none
+        margin-bottom: 36px
+    &__icons
+        width: 300px
+        display: flex
+        margin: 0 auto
+    &__icon
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 53px
+        height: 52px
+        border: 2px solid #FFF
+        border-radius: 100%
+        margin: 0 20px
+        img
+            width: 24px
+            height: 24px
+
+
+    
+#consult
+    display: none
+#order 
+    display: none
+#thanks
+    display: none
+
+
+
+.layer
+    display: none
+    position: fixed
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0,.56 )
+    top: 0
+.modal
+    flex-direction: column
+    align-items: center
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 382px
+    min-height: 402px
+    background-color: #F2F2F2
+    padding: 39px 0 40px 0
+    &_mini
+        min-height: 140px
+    &__close
+        position: absolute
+        right: -40px
+        top: 0
+        font-size: 40px
+        line-height: 20px
+        font-weight: 900
+        color: $main-color
+        cursor: pointer
+    &__subtitle
+        color: #0D0D0D
+        text-align: center
+        font-size: 19px
+        font-style: normal
+        font-weight: 700
+        line-height: 14px
+    &__descr
+        color: #0D0D0D
+        text-align: center
+        font-size: 14px
+        font-style: normal
+        font-weight: 700
+        line-height: 14px
+        margin-top: 10px
+        margin-bottom: 26px
+    form
+        margin-left: 40px
+        input
+            margin-bottom: 12px
+    button
+        margin-top: 5px
+
+.smooth
+    display: none
+    position: fixed
+    right: 40px
+    bottom: 40px
+    transition: 0.5s
+    img
+        height: 40px
+        width: 40px
+@keyframes pulse
+    from
+        transform: scale(1) 
+    50%
+        transform: scale(1.2) 
+    to
+        transform: scale(1) 
+
+        
+.animation__heart
+    animation-name: pulse
+    animation-duration: 0.5s
+    animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0)
+    animation-iteration-count: infinite
+    &:hover
+        animation-play-state: paused
+        
+     
+
+
+
+
+
+
+
+
+
+
+
+.clients
+    min-height: 920px
+    &__title
+        text-align: center
+        color: #0D0D0D
+        text-align: center
+        font-size: 30px
+        font-style: normal
+        font-weight: 700
+        line-height: 100% 
+        text-transform: uppercase     
+    &__item
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        margin-top: 60px
+        span
+            margin-bottom: 10px
+    &__img
+        width: 169px
+        height: 169px
+        margin-right: 61px
+    h2
+        margin-block-start: 0px 
+        margin-block-end: 0px
+    &__name
+        color: #0D0D0D
+        font-size: 18px
+        font-style: normal
+        font-weight: 700
+        line-height: 100%
+    &__info
+        color: #646464
+        font-size: 14px
+        font-style: normal
+        font-weight: 500
+        line-height: normal
+        padding-bottom: 10px
+    &__descr
+        color: #0D0D0D
+        font-size: 16px
+        font-style: normal
+        font-weight: 300
+        line-height: 19px
+
+
+
+
+
+
+
+@import base/_vars
+@import blocks/_promo
+@import blocks/_header
+@import blocks/_buttons
+@import blocks/_advantages
+@import blocks/_slider
+@import blocks/_consultation
+@import blocks/_media
